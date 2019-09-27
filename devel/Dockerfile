@@ -162,7 +162,7 @@ RUN rosdep init && rosdep update
 # Install ros packages
 ENV ROS_DISTRO melodic
 RUN apt-get update && apt-get install -y \
-    ros-melodic-ros-core=1.4.1-0* \
+    ros-melodic-desktop-full=1.4.1-0* \
     && rm -rf /var/lib/apt/lists/*
 
 # Add .bashrc
