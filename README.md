@@ -5,11 +5,11 @@
 The following instructions originate from the following [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/).
 
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 ```bash
-sudo apt-get install \
+sudo apt install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -33,11 +33,11 @@ sudo add-apt-repository \
 ```
 
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 ```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 
 ```bash
@@ -58,9 +58,11 @@ $ sudo systemctl restart docker
 
 ## Shell Commands
 
+### Execution
+
 Testing the base docker installation:
 ```bash
-sudo docker run hello-world
+docker run hello-world
 ```
 
 Starting bash terminal using a temporary user:
@@ -76,6 +78,23 @@ docker run -u docker --gpus all -it <DOCKER-CONTAINER>
 Create new terminal session in already running container:
 ```bash
 docker exec -it <CONTAINER> bash
+```
+
+### Management
+
+Listing containers currently running on the host system:
+```bash
+docker ps
+```
+
+Listing images currently available on the host system:
+```bash
+docker image ls
+```
+
+Remove unused images:
+```bash
+docker image prune
 ```
 
 ## License
